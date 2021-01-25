@@ -18,8 +18,8 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 def get_dataframe():
     return pd.DataFrame(
-        np.random.randn(50, 20),
-        columns=('col %d' % i for i in range(20)))
+        np.random.randn(50, 5),
+        columns=('col %d' % i for i in range(5)))
 
 
 df = get_dataframe()
