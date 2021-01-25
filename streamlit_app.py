@@ -20,4 +20,4 @@ df = get_dataframe()
 df = df.round(2)
 df.columns = ['Mon','Tues','Wed','Thur','Fri']
 
-st.table(df.style.highlight_max(axis=0))
+st.table(df.style.format('£{0:,.2f}'))
