@@ -12,7 +12,7 @@ import numpy as np
 
 def get_dataframe():
     return pd.DataFrame(
-        np.random.randn(5, 5),
+        np.random.randn(5, 5)^2*1000,
         columns=('col %d' % i for i in range(5)))
 
 
