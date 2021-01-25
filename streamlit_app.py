@@ -12,12 +12,12 @@ import numpy as np
 
 def get_dataframe():
     return pd.DataFrame(
-        abs(np.random.randn(5, 5)*1000),
+        abs(np.random.randn(7, 10)*1000),
         columns=('col %d' % i for i in range(5)))
 
 
 df = get_dataframe()
 df = df.round(2)
-df.columns = ['Mon','Tues','Wed','Thur','Fri']
+df.columns = ['Mon','Tues','Wed','Thur','Fri','Sat','Sun']
 
 st.table(df.style.format('£{0:,.2f}'))
