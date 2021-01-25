@@ -12,7 +12,7 @@ import numpy as np
 
 def get_dataframe():
     return pd.DataFrame(
-        abs(np.random.randn(5, 5)*1000),
+        round(abs(np.random.randn(5, 5)*1000),2),
         columns=('col %d' % i for i in range(5)))
 
 
