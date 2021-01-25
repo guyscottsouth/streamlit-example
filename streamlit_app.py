@@ -17,7 +17,7 @@ def get_dataframe():
 
 
 df = get_dataframe()
-df.round(2)
+df = df.round(2)
 df.columns = ['Mon','Tues','Wed','Thur','Fri']
 
 st.table(df.style.highlight_max(axis=0))
