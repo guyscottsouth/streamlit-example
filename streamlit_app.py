@@ -18,10 +18,11 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 def get_dataframe():
     return pd.DataFrame(
-        np.random.randn(50, 5),
+        np.random.randn(5, 5),
         columns=('col %d' % i for i in range(5)))
 
 
 df = get_dataframe()
+df.columns['Mon','Tues','Wed','Thur','Fri']
 
 st.table(df.style.highlight_max(axis=0))
