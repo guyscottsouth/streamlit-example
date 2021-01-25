@@ -12,11 +12,12 @@ import numpy as np
 
 def get_dataframe():
     return pd.DataFrame(
-        round(abs(np.random.randn(5, 5)*1000),2),
+        abs(np.random.randn(5, 5)*1000),
         columns=('col %d' % i for i in range(5)))
 
 
 df = get_dataframe()
+df.round(2)
 df.columns = ['Mon','Tues','Wed','Thur','Fri']
 
 st.table(df.style.highlight_max(axis=0))
