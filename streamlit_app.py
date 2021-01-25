@@ -19,5 +19,6 @@ def get_dataframe():
 df = get_dataframe()
 df = df.round(2)
 df.columns = ['Mon','Tues','Wed','Thur','Fri','Sat','Sun']
+df.index = ['143 - York 1'. '206 - York 2','493 - York Monks Cross','395 - Hull 2','960 - Hull 3']
 
 st.table(df.style.format('£{0:,.2f}'))
