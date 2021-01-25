@@ -23,6 +23,6 @@ def get_dataframe():
 
 
 df = get_dataframe()
-df.columns['Mon','Tues','Wed','Thur','Fri']
+df.columns = ['Mon','Tues','Wed','Thur','Fri']
 
 st.table(df.style.highlight_max(axis=0))
