@@ -13,7 +13,7 @@ import numpy as np
 def get_dataframe():
     return pd.DataFrame(
         abs(np.random.randn(7, 10)*1000),
-        columns=('col %d' % i for i in range(5)))
+        columns=('col %d' % i for i in range(7)))
 
 
 df = get_dataframe()
