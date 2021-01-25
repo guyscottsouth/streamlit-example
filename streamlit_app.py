@@ -15,6 +15,14 @@ forums](https://discuss.streamlit.io).
 In the meantime, below is an example of what you can do with just a few lines of code:
 """
 
+def get_dataframe():
+    return pd.DataFrame(
+        np.random.randn(50, 20),
+        columns=('col %d' % i for i in range(20)))
+
+
+df = get_dataframe()
+
 
 with st.echo(code_location='below'):
     total_points = st.sidebar.slider("Number of points in spiral", 1, 5000, 2000)
@@ -36,3 +44,5 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+    
+st.dataframe(df)
